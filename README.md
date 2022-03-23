@@ -1,6 +1,6 @@
 # Angular Learn
 
-## Setup and Installation 
+## Setup and Installation
 
 1. Install Node.js
 
@@ -52,12 +52,12 @@ npm install <package-name>
 eg: npm install bootstrap
 ```
 
-
 ## Angular Data Binding
 
 1. Interpolation / Angular Expression
 
 card.component.ts
+
 ```js
 export class CardComponent implements OnInit {
 
@@ -73,6 +73,7 @@ export class CardComponent implements OnInit {
 ```
 
 card.component.html
+
 ```html
 <div class="card shadow-lg">
                     <img src="https://cdn.corporatefinanceinstitute.com/assets/affiliated-companies-1024x614.jpeg" alt="" class="image-fluid">
@@ -82,4 +83,33 @@ card.component.html
                         <button class="btn btn-danger">Book Now</button>
                     </div>
                 </div>
+```
+
+
+
+2. **Prop Binding**
+
+
+
+card.component.ts
+
+```js
+export class CardComponent implements OnInit {
+
+  //variable
+  public typeName:string = "Company";
+  public compImage:string = "https://cdn.corporatefinanceinstitute.com/assets/affiliated-companies-1024x614.jpeg"
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+  
+}
+```
+
+card.component.html
+
+```html
+<img [src]="compImage" alt="" class="image-fluid">
 ```
