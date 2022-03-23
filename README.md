@@ -51,3 +51,35 @@ ng g c my-component-name
 npm install <package-name>
 eg: npm install bootstrap
 ```
+
+
+## Angular Data Binding
+
+1. Interpolation / Angular Expression
+
+card.component.ts
+```js
+export class CardComponent implements OnInit {
+
+  //variable
+  public typeName:string = "Company"
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+```
+
+card.component.html
+```html
+<div class="card shadow-lg">
+                    <img src="https://cdn.corporatefinanceinstitute.com/assets/affiliated-companies-1024x614.jpeg" alt="" class="image-fluid">
+                    <div class="card-body">
+                        <h3>{{ typeName }}</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iste repudiandae quaerat, odit reiciendis sapiente culpa? Ipsam obcaecati voluptatem ab.</p>
+                        <button class="btn btn-danger">Book Now</button>
+                    </div>
+                </div>
+```
