@@ -113,3 +113,34 @@ card.component.html
 ```html
 <img [src]="compImage" alt="" class="image-fluid">
 ```
+
+
+
+3. **Event Binding**
+
+
+
+card.component.ts
+
+```js
+public counter:number = 0;
+
+
+public incrementNumber():void {
+    this.counter++;
+  }
+
+  public decrementNumber():void {
+    this.counter--;
+  }
+```
+
+
+
+card.component.html
+
+```html
+<p class="h4 mt-5">Counter: {{ counter }}</p>
+<button (click)="incrementNumber()" class="mt-3 m-3 btn btn-success">Increment</button>
+<button (click)="decrementNumber()" class="mt-3 m-3 btn btn-danger">Decrement</button>
+```
